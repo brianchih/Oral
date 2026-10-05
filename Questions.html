@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master's Thesis Oral Defense Questions</title>
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #0284c7;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --heading-color: #0f172a;
+            --border-color: #e2e8f0;
+            --highlight-bg: #f0f9ff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .card-header {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card-header h2 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .badge {
+            background-color: var(--secondary-color);
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .card-body {
+            padding: 24px;
+        }
+
+        .section-title {
+            font-weight: 700;
+            color: var(--heading-color);
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .question-box {
+            background-color: var(--highlight-bg);
+            border-left: 4px solid var(--secondary-color);
+            padding: 18px 20px;
+            border-radius: 0 8px 8px 0;
+            font-size: 1.05rem;
+            color: #0f172a;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .checklist {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .checklist li {
+            margin-bottom: 8px;
+            color: #475569;
+        }
+
+        .checklist li::marker {
+            color: var(--secondary-color);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Oral Defense Examination Questions</h1>
+        <div class="subtitle">Empirical Comparison of Decentralized and Centralized Prediction Markets</div>
+    </header>
+
+    <!-- Question 1 -->
+    <div class="card">
+        <div class="card-header">
+            <h2>Question 1: Nature of the Event Contracts</h2>
+            <span class="badge">Financial Instrument</span>
+        </div>
+        <div class="card-body">
+            <div class="section-title">Oral Defense Question (English)</div>
+            <div class="question-box">
+                "Jubal, in your thesis, you analyzed over 1.3 million resolved markets. Suppose a layperson asks you: 'If I spend $0.65 USDC on Polymarket to buy a YES share on a presidential market, how does this fundamentally differ from buying a share of stock or a futures contract? What does this $0.65 price actually represent, and what happens to the payout at resolution?' How would you explain the underlying mechanism in intuitive terms?"
+            </div>
+
+            <div class="section-title">Key Evaluation Points (Expected Answer)</div>
+            <ul class="checklist">
+                <li>Clarify that event contracts are binary options with a fixed all-or-nothing payout structure ($1.00 or $0.00).</li>
+                <li>Explain that the price of $0.65 reflects the market's implied probability (65%) of the event occurring.</li>
+                <li>Emphasize that the risk is capped at the principal invested ($0.65), with a maximum return of $1.00 if correct.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="card">
+        <div class="card-header">
+            <h2>Question 2: Counterparties & Settlement Mechanics</h2>
+            <span class="badge">Microstructure & Liquidity</span>
+        </div>
+        <div class="card-body">
+            <div class="section-title">Oral Defense Question (English)</div>
+            <div class="question-box">
+                "In Chapter 2, you note that decentralized platforms use smart contracts so the operator bears no settlement or counterparty risk. Could you clarify who the actual counterparty is when a trader buys a YES token? In an illiquid market where no other retail trader is selling, how does the system generate new contracts to match this buyer, and how is the underlying capital locked?"
+            </div>
+
+            <div class="section-title">Key Evaluation Points (Expected Answer)</div>
+            <ul class="checklist">
+                <li>Identify potential counterparties: secondary market sellers, opposite-position buyers (NO shares), or market-making bots.</li>
+                <li>Explain the primary market mechanism: contract minting/splitting via $1.00 collateral into 1 YES + 1 NO token.</li>
+                <li>Highlight that all contracts are fully collateralized in the smart contract, eliminating exchange credit risk.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="card">
+        <div class="card-header">
+            <h2>Question 3: Lead-Lag Dynamics vs. Listing Friction</h2>
+            <span class="badge">Empirical Results</span>
+        </div>
+        <div class="card-body">
+            <div class="section-title">Oral Defense Question (English)</div>
+            <div class="question-box">
+                "Your empirical findings show a fascinating pattern: Polymarket reaches sustained 95% confidence about 7 days earlier, yet the same-event analysis reveals that 82% of paired markets move in zero-lag synchrony at both hourly and daily resolutions. These two findings might seem contradictory at first glance. What is the underlying microstructure mechanism behind this, and does it reflect 'faster price discovery' or something else?"
+            </div>
+
+            <div class="section-title">Key Evaluation Points (Expected Answer)</div>
+            <ul class="checklist">
+                <li>Address the lag-0 synchrony: both platforms process public information at similar speeds once listed.</li>
+                <li>Explain that earliness is driven by the <i>permissionless listing effect</i> rather than faster price discovery.</li>
+                <li>Point to regulatory gates (e.g., CFTC approval hurdles on Kalshi) as the primary friction delaying contract availability.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>Master's Thesis Defense Guide &bull; Prepared for Academic Examination</p>
+    </footer>
+</div>
+
+</body>
+</html>
