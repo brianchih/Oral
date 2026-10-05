@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defense Questions - Fundamentals Supplement</title>
+    <style>
+        :root {
+            --primary-color: #312e81;
+            --secondary-color: #4338ca;
+            --bg-color: #f5f3ff;
+            --card-bg: #ffffff;
+            --text-color: #1e1b4b;
+            --heading-color: #1e1b4b;
+            --border-color: #e0e7ff;
+            --highlight-bg: #eeef2f6;
+            --badge-bg: #e0e7ff;
+            --badge-color: #3730a3;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #c7d2fe;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #4338ca;
+            font-size: 1.1rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .card-header {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card-header h2 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .badge {
+            background-color: var(--badge-bg);
+            color: var(--badge-color);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .card-body {
+            padding: 24px;
+        }
+
+        .section-title {
+            font-weight: 700;
+            color: var(--heading-color);
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .question-box {
+            background-color: #f5f3ff;
+            border-left: 4px solid var(--secondary-color);
+            padding: 18px 20px;
+            border-radius: 0 8px 8px 0;
+            font-size: 1.05rem;
+            color: #1e1b4b;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .checklist {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .checklist li {
+            margin-bottom: 8px;
+            color: #312e81;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #6366f1;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Fundamental Concepts Supplement</h1>
+        <div class="subtitle">Core Economics, Statistics & Market Efficiency Questions</div>
+    </header>
+
+    <!-- Question 4 -->
+    <div class="card">
+        <div class="card-header">
+            <h2>Question 4: Price-as-Probability Equivalence</h2>
+            <span class="badge">Economic Theory</span>
+        </div>
+        <div class="card-body">
+            <div class="section-title">Oral Defense Question (English)</div>
+            <div class="question-box">
+                "Jubal, throughout your thesis, you treat posted prices (e.g., $0.70) directly as implied probability estimates (70%). Simply put, why can market prices be interpreted as probabilities, and what key economic assumption underlies this equivalence?"
+            </div>
+
+            <div class="section-title">Key Evaluation Points (Expected Answer)</div>
+            <ul class="checklist">
+                <li>Explain risk-neutral expected value: $E[\text{Payoff}] = (p \times \$1) + ((1-p) \times \$0) = p$.</li>
+                <li>Connect to the Semi-Strong Efficient Market Hypothesis (Fama, 1970) for public information aggregation.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="card">
+        <div class="card-header">
+            <h2>Question 5: Brier Score vs. Accuracy Rate</h2>
+            <span class="badge">Statistical Metric</span>
+        </div>
+        <div class="card-body">
+            <div class="section-title">Oral Defense Question (English)</div>
+            <div class="question-box">
+                "You rely heavily on the Brier Score to measure forecast accuracy. In simple terms, what is the formula and range for the Brier Score, and why is it superior to a simple 'accuracy rate' for evaluating probability forecasts?"
+            </div>
+
+            <div class="section-title">Key Evaluation Points (Expected Answer)</div>
+            <ul class="checklist">
+                <li>State formula $BS = (p - o)^2$, bounded on $[0, 1]$, where lower values represent better calibration.</li>
+                <li>Define <i>proper scoring rule</i>: heavily penalizes overconfident wrong forecasts (e.g., 99% confident but wrong).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="card">
+        <div class="card-header">
+            <h2>Question 6: Arbitrage Mechanism</h2>
+            <span class="badge">Market Mechanics</span>
+        </div>
+        <div class="card-body">
+            <div class="section-title">Oral Defense Question (English)</div>
+            <div class="question-box">
+                "In a healthy prediction market, if the price of YES is $0.60 and NO is $0.50 for the same event (summing to $1.10), or if they sum to $0.90, what happens in the market? How do arbitrageurs act to bring the combined price back to $1.00?"
+            </div>
+
+            <div class="section-title">Key Evaluation Points (Expected Answer)</div>
+            <ul class="checklist">
+                <li>Sum > $1.00: Arbitrageurs mint 1 pair for $1.00 and sell both for $1.10, locking in a $0.10 risk-free profit while pushing prices down.</li>
+                <li>Sum < $1.00: Arbitrageurs buy both shares for $0.90 and burn/redeem them with the platform for $1.00 cash, pushing prices up.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="card">
+        <div class="card-header">
+            <h2>Question 7: Favorite-Longshot Bias Intuition</h2>
+            <span class="badge">Behavioral Bias</span>
+        </div>
+        <div class="card-body">
+            <div class="section-title">Oral Defense Question (English)</div>
+            <div class="question-box">
+                "Your Hypothesis 3 confirms that both platforms exhibit the Favorite-Longshot Bias. Using an everyday example (like lottery tickets or horse racing), how would you explain this bias, and why do traders tend to overvalue low-probability events?"
+            </div>
+
+            <div class="section-title">Key Evaluation Points (Expected Answer)</div>
+            <ul class="checklist">
+                <li>Define the bias: overpricing low-probability longshots and underpricing high-probability favorites.</li>
+                <li>Explain cognitive mechanics: Prospect Theory probability weighting and lottery-like preference for high payoff odds at low cost.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>Thesis Defense Questions &bull; Core Economics & Methodology</p>
+    </footer>
+</div>
+
+</body>
+</html>
